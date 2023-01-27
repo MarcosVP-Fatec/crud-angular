@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Este ambiente - Loiane
+- Para liberar instruções no Windows: **Set-ExecutionPolicy -Scope Process -ExecutionPolicy ByPass**
+- Para executar o serviço: **ng serve**
+- Para instalar o Angular Material (Se estiver no package.json será pelo npm install): **ng add @angular/material**
+- Documentação Angular Material: **https://material.angular.io/**
