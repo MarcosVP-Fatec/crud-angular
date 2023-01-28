@@ -30,4 +30,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Para liberar instruções no Windows: **Set-ExecutionPolicy -Scope Process -ExecutionPolicy ByPass**
 - Para executar o serviço: **ng serve**
 - Para instalar o Angular Material (Se estiver no package.json será pelo npm install): **ng add @angular/material**
-- Documentação Angular Material: **https://material.angular.io/**
+
+## Documentação
+- **https://material.angular.io/**
+- **https://angular.io/**
+- **https://www.material.io/**
