@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Course } from '../model/course';
+import { first, tap } from 'rxjs';
 
 @Injectable({
   //O import deverá ser no app.module.ts por ser global (root) usando HttpClientModule
@@ -9,12 +10,19 @@ import { Course } from '../model/course';
 })
 export class CoursesService {
 
+  private readonly API = '/assets/courses.json';
+
   // Injeção de dependência direto no contrutor do Angular
   constructor(private httpClient: HttpClient) { }
 
-  list(): Course[] {
-    return [
-      { _id: '1', name: 'Angular', category: 'front-end'}
-    ];
+  list() {
+    // No lugar de first() pode ser usar o take(1)
+    // Assim que o servidor der uma resposta finaliza a inscrição nesta origem de dados.
+    return this.httpClient.get<Course[]>(this.API)
+               .pipe(
+                  first(),
+                  tap(courses => console.log(courses))
+               );
+;
   }
 }
